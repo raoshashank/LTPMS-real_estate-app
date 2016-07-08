@@ -42,8 +42,8 @@ public class MainActivity extends AppCompatActivity {
         final EditText email_et = (EditText) findViewById(R.id.email);
         final EditText password_et = (EditText) findViewById(R.id.password);
         TextView login = (TextView) findViewById(R.id.login);
-        TextView register = (TextView) findViewById(R.id.register);
-        register.setText(Html.fromHtml("<p><u>Sign Up</u></p>"));
+        TextView signup = (TextView) findViewById(R.id.signup);
+        signup.setText(Html.fromHtml("<p><u>SignUp</u></p>"));
         //      Button register = (Button)findViewById(R.id.register);
         requestQueue = Volley.newRequestQueue(MainActivity.this);
         login.setOnClickListener(new View.OnClickListener() {
@@ -56,7 +56,9 @@ public class MainActivity extends AppCompatActivity {
 
                             JSONObject jsonObject = new JSONObject(response);
                             if (jsonObject.names().get(0).equals("success")) {
-                                Toast.makeText(getApplicationContext(), jsonObject.names().getString(0).toString(), Toast.LENGTH_SHORT).show();
+                            //    Toast.makeText(getApplicationContext(), jsonObject.names().getString(0).toString(), Toast.LENGTH_SHORT).show();
+                                Intent intent = new Intent(MainActivity.this,HomeScreen.class);
+                                startActivity(intent);
                             } else {
                                 Toast.makeText(getApplicationContext(), "fail", Toast.LENGTH_SHORT).show();
                             }
@@ -90,10 +92,11 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        register.setOnClickListener(new View.OnClickListener() {
+        signup.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(MainActivity.this,RegisterActivity.class);
+                startActivity(intent);
             }
         });
 

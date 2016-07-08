@@ -93,7 +93,7 @@
         android:textStyle="italic|bold"
         android:fontFamily="serif"
         android:textColor="@color/std_gold"
-        android:id="@+id/register"
+        android:id="@+id/signup"
         android:layout_alignTop="@+id/textView"
         android:layout_toRightOf="@+id/textView"
         android:layout_toEndOf="@+id/textView"
