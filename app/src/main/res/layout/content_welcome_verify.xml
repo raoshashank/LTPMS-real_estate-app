@@ -15,7 +15,7 @@
 
     <ImageView
         android:layout_width="wrap_content"
-        android:layout_height="250sp"
+        android:layout_height="250dp"
         android:id="@+id/imageView3"
         android:src="@drawable/logo"
         android:layout_alignParentTop="true"
@@ -24,12 +24,11 @@
     <TextView
         android:textAlignment="center"
         android:fontFamily="serif"
-        android:textStyle="italic"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Just One More Step To Go!"
         android:textColor="@color/std_gold"
-        android:textSize="30sp"
+        android:textSize="30dp"
         android:id="@+id/textView3"
         android:layout_below="@+id/imageView3"
         android:layout_centerHorizontal="true" />
@@ -39,13 +38,28 @@
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceSmall"
         android:text="Verify Email"
-        android:textSize="25sp"
-        android:textStyle="italic|bold"
+        android:textSize="25dp"
+        android:textStyle="bold"
         android:fontFamily="serif"
         android:textColor="@color/std_gold"
         android:id="@+id/verify"
-        android:backgroundTint="@color/dark_gold"
+        android:backgroundTint="@color/primary_color"
         android:layout_marginTop="76dp"
         android:layout_below="@+id/textView3"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="Log In Now"
+        android:textSize="25dp"
+        android:textStyle="bold"
+        android:fontFamily="serif"
+        android:textColor="@color/std_gold"
+        android:id="@+id/lognow"
+        android:backgroundTint="@color/primary_color"
+        android:layout_marginTop="54dp"
+        android:layout_below="@+id/verify"
         android:layout_centerHorizontal="true" />
 </RelativeLayout>

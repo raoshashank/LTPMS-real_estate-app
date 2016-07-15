@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.example.shashank.ltpms.UserProfile"
+    android:background="@color/color_white"
+    android:fillViewport="true">
+
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textPersonName"
+        android:hint="First Name:"
+        android:backgroundTint="@color/std_gold"
+        android:ems="10"
+        android:id="@+id/first_name_entry"
+        android:layout_above="@+id/last_name_entry"
+        android:layout_alignRight="@+id/email_entry"
+        android:layout_alignEnd="@+id/email_entry"
+        android:layout_marginRight="23dp"
+        android:layout_marginEnd="23dp" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textPersonName"
+        android:hint="Last Name:"
+        android:ems="10"
+        android:backgroundTint="@color/std_gold"
+        android:id="@+id/last_name_entry"
+        android:layout_alignBottom="@+id/imagePicker"
+        android:layout_alignRight="@+id/first_name_entry"
+        android:layout_alignEnd="@+id/first_name_entry" />
+
+
+    <ImageView
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:id="@+id/imagePicker"
+        android:src="@drawable/ic_menu_gallery"
+        android:layout_below="@+id/space"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="18dp" />
+
+    <TextView
+        android:textSize="23sp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textEmailAddress"
+        android:ems="10"
+        android:id="@+id/email_entry"
+        android:layout_marginTop="26dp"
+        android:backgroundTint="@color/std_gold"
+        android:hint="Email"
+        android:layout_below="@+id/last_name_entry"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textMultiLine"
+        android:ems="10"
+        android:hint="Current Address"
+        android:backgroundTint="@color/std_gold"
+        android:id="@+id/current_address_entry"
+        android:layout_below="@+id/email_entry"
+        android:layout_alignLeft="@+id/email_entry"
+        android:layout_alignStart="@+id/email_entry"
+        android:layout_marginTop="20dp"
+        android:layout_alignRight="@+id/email_entry"
+        android:layout_alignEnd="@+id/email_entry" />
+
+    <EditText
+        android:hint="Contact Number 1"
+        android:backgroundTint="@color/std_gold"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="numberSigned"
+        android:ems="10"
+        android:id="@+id/cntc_entry_1"
+        android:layout_marginTop="22dp"
+        android:layout_below="@+id/current_address_entry"
+        android:layout_alignLeft="@+id/current_address_entry"
+        android:layout_alignStart="@+id/current_address_entry"
+        android:layout_alignRight="@+id/current_address_entry"
+        android:layout_alignEnd="@+id/current_address_entry" />
+
+    <EditText
+        android:hint="Contact Number 2"
+        android:backgroundTint="@color/std_gold"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="numberSigned"
+        android:ems="10"
+        android:id="@+id/cntc_entry_2"
+        android:layout_below="@+id/cntc_entry_1"
+        android:layout_alignLeft="@+id/cntc_entry_1"
+        android:layout_alignStart="@+id/cntc_entry_1"
+        android:layout_marginTop="25dp"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+
+    <EditText
+        android:hint="Permanent Address"
+        android:backgroundTint="@color/std_gold"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="numberSigned"
+        android:ems="10"
+        android:id="@+id/permanent_address_entry"
+        android:layout_marginTop="24dp"
+        android:layout_below="@+id/cntc_entry_2"
+        android:layout_alignLeft="@+id/cntc_entry_2"
+        android:layout_alignStart="@+id/cntc_entry_2"
+        android:layout_alignRight="@+id/cntc_entry_2"
+        android:layout_alignEnd="@+id/cntc_entry_2" />
+
+    <EditText
+        android:hint="ID Proof 1"
+        android:backgroundTint="@color/std_gold"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="numberSigned"
+        android:ems="10"
+        android:id="@+id/idp_entry_1"
+        android:layout_marginTop="21dp"
+        android:layout_below="@+id/permanent_address_entry"
+        android:layout_alignLeft="@+id/permanent_address_entry"
+        android:layout_alignStart="@+id/permanent_address_entry"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textMultiLine"
+        android:ems="10"
+        android:hint="ID Proof 2"
+        android:backgroundTint="@color/std_gold"
+        android:id="@+id/idp_entry_2"
+        android:layout_marginTop="17dp"
+        android:layout_below="@+id/idp_entry_1"
+        android:layout_alignLeft="@+id/idp_entry_1"
+        android:layout_alignStart="@+id/idp_entry_1"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Done"
+        android:id="@+id/done_profile"
+        android:textColor="@color/std_gold"
+        android:textSize="30dp"
+        android:layout_below="@+id/idp_entry_2"
+        android:layout_alignRight="@+id/last_name_entry"
+        android:layout_alignEnd="@+id/last_name_entry"
+        android:layout_marginTop="33dp" />
+
+    <View
+        android:layout_width="match_parent"
+        android:background="@color/primary_color"
+        android:layout_height="1dp"
+        android:id="@+id/space"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:id="@+id/space2"
+        android:background="@color/primary_color"/>
+
+
+</RelativeLayout>
+</ScrollView>
