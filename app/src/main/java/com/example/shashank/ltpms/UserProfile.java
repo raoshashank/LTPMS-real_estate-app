@@ -35,7 +35,7 @@ public class UserProfile extends AppCompatActivity {
         first_name_entry = (EditText)findViewById(R.id.first_name_entry);
         last_name_entry = (EditText)findViewById(R.id.last_name_entry);
         final TextView email_entry = (TextView)findViewById(R.id.email_entry);
-        current_address_entry=(EditText)findViewById(R.id.current_address_entry);
+        current_address_entry=(EditText)findViewById(R.id.DOB_entry);
         cntc_entry_1 = (EditText)findViewById(R.id.cntc_entry_1);
         cntc_entry_2=(EditText)findViewById(R.id.cntc_entry_2);
         permanent_address_entry = (EditText)findViewById(R.id.permanent_address_entry);

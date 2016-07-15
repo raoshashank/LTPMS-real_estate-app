@@ -16,17 +16,17 @@
         android:layout_width="80dp"
         android:layout_height="80dp"
         android:id="@+id/imageView7"
-        android:src="@mipmap/nav_header_icon"
+        android:src="@drawable/profile_icon"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true" />
-    <TextView
+    <com.example.shashank.ltpms.CustomTextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Shashank"
-        android:textSize="25dp"
+        android:textSize="19dp"
         android:textColor="@color/color_white"
         android:fontFamily="sans-serif-condenseds"/>
-    <TextView
+    <com.example.shashank.ltpms.CustomTextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textSize="19dp"

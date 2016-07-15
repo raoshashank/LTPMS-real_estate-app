@@ -13,49 +13,54 @@
     tools:showIn="@layout/activity_welcome_verify"
     android:id="@+id/rel">
 
-    <ImageView
+    <com.example.shashank.ltpms.CustomTextView
         android:layout_width="wrap_content"
         android:layout_height="250dp"
-        android:id="@+id/imageView3"
-        android:src="@drawable/logo"
+        android:id="@+id/imageView"
+        android:text="LTPMS"
+        android:textSize="110dp"
+        android:gravity="center"
+        android:textColor="@color/std_gold"
         android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true" />
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
 
-    <TextView
+
+    <com.example.shashank.ltpms.CustomTextView
         android:textAlignment="center"
-        android:fontFamily="serif"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Just One More Step To Go!"
-        android:textColor="@color/std_gold"
+        android:textColor="@color/primary_color"
         android:textSize="30dp"
         android:id="@+id/textView3"
-        android:layout_below="@+id/imageView3"
+        android:layout_marginTop="260dp"
+        android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true" />
 
-    <TextView
+    <com.example.shashank.ltpms.CustomTextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceSmall"
         android:text="Verify Email"
         android:textSize="25dp"
         android:textStyle="bold"
-        android:fontFamily="serif"
-        android:textColor="@color/std_gold"
+        android:textColor="@color/primary_color"
         android:id="@+id/verify"
         android:backgroundTint="@color/primary_color"
         android:layout_marginTop="76dp"
         android:layout_below="@+id/textView3"
         android:layout_centerHorizontal="true" />
 
-    <TextView
+    <com.example.shashank.ltpms.CustomTextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceSmall"
         android:text="Log In Now"
         android:textSize="25dp"
         android:textStyle="bold"
-        android:fontFamily="serif"
         android:textColor="@color/std_gold"
         android:id="@+id/lognow"
         android:backgroundTint="@color/primary_color"
