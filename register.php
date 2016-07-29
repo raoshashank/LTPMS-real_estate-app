@@ -16,10 +16,10 @@ if(isset($_POST['email'],$_POST['password']))
 	if(!empty($email) && !empty($password) )
 	
 	{
-			if(filter_var($email,FILTER_VALIDATE_EMAIL))
+			if(filter_var($email,FILTER_VALIDATE_EMAIL)!=5)				//Change during submission
 			{
 				
-				$query = "SELECT * FROM login where email = '$email' AND password = '$password'";
+				$query = "SELECT * FROM user where email = '$email' AND password = '$password'";
 				$result = mysqli_query($conn,$query);
 				if(mysqli_num_rows($result)>0)
 				{
@@ -28,14 +28,15 @@ if(isset($_POST['email'],$_POST['password']))
 				}
 			
 				 else{
+						
 						$code = md5(uniqid(rand()));
-						$query = "INSERT INTO login(email,password,code) values ('$email','$password','$code')";
+						$query = "INSERT INTO user(user_id,email,password,code) values ('$user_id','$email','$password','$code')";
 						$result =mysqli_query($conn,$query);
 						if($result == 1 )
 						{
 							
 						
-								$query = "UPDATE login SET code = '$code'  WHERE email = '$email' AND status = 0";
+								$query = "UPDATE user SET code = '$code'  WHERE email = '$email' AND email_verif_stat = 0";
 								mysqli_query($conn,$query);
 		
 								$mail->isSMTP();                                      // Set mailer to use SMTP
@@ -50,7 +51,7 @@ if(isset($_POST['email'],$_POST['password']))
 								$mail->Body    = '
 	
 									<h3>
-									Welcome! to app name ! </h3></br>
+									Welcome! to LTPMS app ! </h3></br>
 									Please click the link below to Verify your email and Complete the Registration Process ></br>
 
 

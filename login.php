@@ -9,7 +9,7 @@ if(isset($_POST['email'],$_POST['password'])){
 	
 	{
 		
-	$query = "SELECT * FROM login where email = '$email' AND password = '$password'";
+	$query = "SELECT * FROM user where email = '$email' AND password = '$password'";
 	$result = mysqli_query($conn,$query);
 	if(mysqli_num_rows($result)>0)
 	{
