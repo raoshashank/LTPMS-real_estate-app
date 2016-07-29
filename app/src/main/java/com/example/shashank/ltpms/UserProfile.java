@@ -4,6 +4,8 @@ import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.CalendarView;
+import android.widget.DatePicker;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -24,22 +26,21 @@ import java.util.Map;
 
 public class UserProfile extends AppCompatActivity {
     RequestQueue requestQueue;
-    EditText first_name_entry,last_name_entry,current_address_entry,cntc_entry_1,cntc_entry_2,idp_entry_1,idp_entry_2,permanent_address_entry;
+    EditText name_entry,current_address_entry,cntc_entry_1,cntc_entry_2,idp_entry_1,idp_entry_2,permanent_address_entry;
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_user_profile);
-        final String URL_profile = "http://localhost/webapp/profile_user.php";
-        first_name_entry = (EditText)findViewById(R.id.first_name_entry);
-        last_name_entry = (EditText)findViewById(R.id.last_name_entry);
+        final String URL_profile = "http://10.50.17.79/webapp/profile_user.php";
+        name_entry = (EditText)findViewById(R.id.name_entry);
         final TextView email_entry = (TextView)findViewById(R.id.email_entry);
-        current_address_entry=(EditText)findViewById(R.id.DOB_entry);
+        DatePicker dt = (DatePicker) findViewById(R.id.DOB_entry);
         cntc_entry_1 = (EditText)findViewById(R.id.cntc_entry_1);
-        cntc_entry_2=(EditText)findViewById(R.id.cntc_entry_2);
+       // cntc_entry_2=(EditText)findViewById(R.id.cntc_entry_2);
         permanent_address_entry = (EditText)findViewById(R.id.permanent_address_entry);
-        TextView done = (TextView)findViewById(R.id.done_profile);
+        TextView done = (TextView)findViewById(R.id .done_profile);
         final Intent intent = getIntent();
         email_entry.setText(intent.getStringExtra("email"));
         requestQueue = Volley.newRequestQueue(this);
@@ -68,11 +69,10 @@ public class UserProfile extends AppCompatActivity {
                    @Override
                    protected Map<String, String> getParams() throws AuthFailureError {
                        HashMap<String,String> hashMap = new HashMap<String, String>();
-                       hashMap.put("f_name",first_name_entry.getText().toString());
-                       hashMap.put("l_name",last_name_entry.getText().toString());
+                       hashMap.put("name",name_entry.getText().toString());
                        hashMap.put("email",intent.getStringExtra("email"));
                        hashMap.put("cntc1",cntc_entry_1.getText().toString());
-                       hashMap.put("cntc2",cntc_entry_2.getText().toString());
+                      // hashMap.put("cntc2",cntc_entry_2.getText().toString());
                        hashMap.put("perman",permanent_address_entry.getText().toString());
                        return hashMap;
                    }

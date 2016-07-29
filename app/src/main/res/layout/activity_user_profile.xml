@@ -20,35 +20,22 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:inputType="textPersonName"
-        android:hint="First Name:"
-        android:backgroundTint="@color/std_gold"
-        android:ems="10"
-        android:id="@+id/first_name_entry"
-        android:layout_above="@+id/last_name_entry"
-        android:layout_alignRight="@+id/email_entry"
-        android:layout_alignEnd="@+id/email_entry"
-        android:layout_marginRight="23dp"
-        android:layout_marginEnd="23dp" />
-
-    <EditText
-        android:textColorHint="@color/primary_color"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:inputType="textPersonName"
-        android:hint="Last Name:"
+        android:hint="Name:"
         android:ems="10"
         android:backgroundTint="@color/std_gold"
-        android:id="@+id/last_name_entry"
-        android:layout_alignBottom="@+id/imagePicker"
-        android:layout_alignRight="@+id/first_name_entry"
-        android:layout_alignEnd="@+id/first_name_entry" />
+        android:id="@+id/name_entry"
+        android:layout_marginTop="29dp"
+        android:layout_alignTop="@+id/imagePicker"
+        android:layout_toRightOf="@+id/imagePicker"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
 
 
     <ImageView
         android:layout_width="100dp"
         android:layout_height="100dp"
         android:id="@+id/imagePicker"
-        android:src="@drawable/ic_menu_gallery"
+        android:src="@drawable/profile_icon"
         android:layout_below="@+id/space"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
@@ -61,16 +48,25 @@
         android:inputType="textEmailAddress"
         android:ems="10"
         android:id="@+id/email_entry"
-        android:layout_marginTop="26dp"
+        android:layout_marginTop="27dp"
         android:backgroundTint="@color/std_gold"
-        android:hint="Email"
-        android:layout_below="@+id/last_name_entry"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
+        android:layout_below="@+id/imagePicker"
+        android:layout_alignRight="@+id/done_profile"
+        android:layout_alignEnd="@+id/done_profile"
+        android:layout_toEndOf="@+id/imagePicker"
+        android:layout_toRightOf="@+id/enteremail" />
+    <com.example.shashank.ltpms.CustomTextView
+        android:textAlignment="center"
+        android:textColor="@color/primary_color"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/email_entry"
+        android:text="Enter Date Of Birth"
+        android:id="@+id/enter_dob"
+        android:textSize="25dp"
+        android:padding="10dp"/>
 
-    <EditText
+    <!--<EditText
         android:textColorHint="@color/primary_color"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -85,7 +81,18 @@
         android:layout_marginTop="20dp"
         android:layout_alignRight="@+id/email_entry"
         android:layout_alignEnd="@+id/email_entry" />
+-->
+    <DatePicker
 
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/DOB_entry"
+        android:layout_centerHorizontal="true"
+        android:yearListSelectorColor="@color/primary_color"
+        android:headerBackground="@color/primary_color"
+        android:layout_below="@+id/enter_dob">
+
+    </DatePicker>
     <EditText
         android:textColorHint="@color/primary_color"
         android:hint="Contact Number "
@@ -97,8 +104,7 @@
         android:id="@+id/cntc_entry_1"
         android:layout_marginTop="22dp"
         android:layout_below="@+id/DOB_entry"
-        android:layout_alignLeft="@+id/DOB_entry"
-        android:layout_alignStart="@+id/DOB_entry"
+        android:layout_alignParentLeft="true"
         android:layout_alignRight="@+id/DOB_entry"
         android:layout_alignEnd="@+id/DOB_entry" />
 
@@ -124,7 +130,7 @@
         android:backgroundTint="@color/std_gold"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:inputType="numberSigned"
+        android:inputType="textMultiLine"
         android:ems="10"
         android:id="@+id/permanent_address_entry"
         android:layout_marginTop="24dp"
@@ -175,8 +181,8 @@
         android:textSize="30dp"
         android:layout_marginTop="35dp"
         android:layout_below="@+id/idp_entry_1"
-        android:layout_alignRight="@+id/last_name_entry"
-        android:layout_alignEnd="@+id/last_name_entry" />
+        android:layout_alignRight="@+id/name_entry"
+        android:layout_alignEnd="@+id/name_entry" />
 
     <View
         android:layout_width="match_parent"
@@ -191,6 +197,17 @@
         android:layout_height="2dp"
         android:id="@+id/space2"
         android:background="@color/primary_color"/>
+
+    <com.example.shashank.ltpms.CustomTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/enteremail"
+        android:text="Email:"
+        android:textSize="25dp"
+        android:textColor="@color/primary_color"
+        android:layout_alignTop="@+id/email_entry"
+        android:layout_alignLeft="@+id/DOB_entry"
+        android:layout_alignStart="@+id/DOB_entry" />
 
 
 </RelativeLayout>

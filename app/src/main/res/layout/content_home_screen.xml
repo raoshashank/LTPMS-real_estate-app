@@ -176,15 +176,8 @@
     android:id="@+id/relbottom"
         android:layout_width="match_parent"
     android:layout_height="wrap_content">
-    <TableRow
-        android:layout_height="wrap_content"
-        android:layout_width="wrap_content"
-        android:id="@+id/tableRow">
 
-
-    </TableRow>
-
-    <com.example.shashank.ltpms.CustomTextView
+        <com.example.shashank.ltpms.CustomTextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceSmall"

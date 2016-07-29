@@ -33,7 +33,7 @@ public class RegisterActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_register);
-        final String URL_Register = "http://192.168.0.106/webapp/register.php";
+        final String URL_Register = "http://10.50.17.79/webapp/register.php";
         TextView register = (TextView) findViewById(R.id.register);
         requestQueue = Volley.newRequestQueue(this);
 

@@ -38,7 +38,7 @@ public class Welcome_verify extends AppCompatActivity {
         RelativeLayout rel = (RelativeLayout)findViewById(R.id.rel);
         Snackbar.make(rel,resp,Snackbar.LENGTH_INDEFINITE).show();
         TextView verify = (TextView)findViewById(R.id.verify);
-        final String URL_Verify = "http://192.168.0.106/webapp/test.php";
+        final String URL_Verify = "http://10.50.17.79/webapp/test.php";
         requestQueue = Volley.newRequestQueue(this);
       verify.setOnClickListener(new View.OnClickListener() {
           @Override

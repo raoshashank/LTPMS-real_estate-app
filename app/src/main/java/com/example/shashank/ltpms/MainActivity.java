@@ -33,8 +33,8 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        final String URL_LOGIN = "http://192.168.0.106/webapp/login.php";
-        final EditText email_et = (EditText) findViewById(R.id.email);
+        final String URL_LOGIN = "http://10.50.17.79/webapp/login.php";
+        final TextView email_et = (TextView) findViewById(R.id.email);
         final EditText password_et = (EditText) findViewById(R.id.password);
 
         //Typeface font =  Typeface.createFromAsset(getAssets(), "fonts/Roboto-Black.ttf");
