@@ -10,29 +10,30 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
     tools:context="com.example.shashank.ltpms.MainActivity"
-    tools:showIn="@layout/activity_main">
+    tools:showIn="@layout/activity_main"
+    >
 
+    <EditText
 
-<EditText
-    android:fontFamily="serif"
-    android:backgroundTint="@color/std_gold"
-    android:textStyle="italic"
-    android:textColorHint="@color/std_gold"
-    android:textCursorDrawable="@drawable/cursor_color"
-    android:hint="Email"
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:id="@+id/email"
-    android:layout_below="@+id/imageView"
-    android:layout_alignLeft="@+id/imageView"
-    android:layout_alignStart="@+id/imageView" />
+        android:fontFamily=""
+        android:backgroundTint="@color/std_gold"
+        android:textColorHint="@color/std_gold"
+        android:textCursorDrawable="@drawable/cursor_color"
+        android:hint="Email"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/email"
+        android:layout_below="@+id/imageView"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="62dp" />
 
     <EditText
         android:textColorHint="@color/std_gold"
         android:backgroundTint="@color/std_gold"
         android:hint="Password"
         android:fontFamily="serif"
-        android:textStyle="italic"
+
         android:textCursorDrawable="@drawable/cursor_color"
         android:id="@+id/password"
         android:typeface="serif"
@@ -43,61 +44,67 @@
         android:layout_centerHorizontal="true"
         android:layout_marginTop="42dp" />
 
-    <TextView
-        android:fontFamily="serif"
-        android:textStyle="italic"
+    <com.example.shashank.ltpms.CustomTextView
+
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Login"
         android:textColor="@color/std_gold"
         android:textSize="30sp"
         android:id="@+id/login"
-        android:layout_below="@+id/password"
+        android:layout_marginRight="26dp"
+        android:layout_marginEnd="26dp"
+        android:layout_above="@+id/signup"
         android:layout_alignRight="@+id/password"
         android:layout_alignEnd="@+id/password"
-        android:layout_marginRight="30dp"
-        android:layout_marginEnd="30dp"
-        android:layout_marginTop="31dp" />
+        android:layout_marginBottom="60dp" />
 
-    <ImageView
+    <com.example.shashank.ltpms.CustomTextView
         android:layout_width="wrap_content"
-        android:layout_height="250sp"
+        android:layout_height="250dp"
         android:id="@+id/imageView"
-        android:src="@drawable/logo"
+        android:text="LTPMS"
+        android:textSize="110sp"
+        android:gravity="center"
+        android:textColor="@color/std_gold"
         android:layout_alignParentTop="true"
         android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
+        android:layout_alignParentStart="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
 
-    <TextView
+    <com.example.shashank.ltpms.CustomTextView
         android:textColor="@color/std_gold"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Not a user yet? "
         android:id="@+id/textView"
         android:textSize="25sp"
-        android:textStyle="italic"
-        android:fontFamily="serif"
-        android:layout_marginTop="30dp"
-        android:layout_below="@+id/login"
-        android:layout_alignLeft="@+id/password"
-        android:layout_alignStart="@+id/password"
-        android:layout_marginLeft="30dp"
-        android:layout_marginStart="30dp" />
 
-    <TextView
+        android:fontFamily="serif"
+        android:layout_marginLeft="26dp"
+        android:layout_marginStart="26dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginBottom="34dp" />
+
+    <com.example.shashank.ltpms.CustomTextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceSmall"
         android:text="Sign Up"
         android:textSize="25sp"
-        android:textStyle="italic|bold"
-        android:fontFamily="serif"
+
         android:textColor="@color/std_gold"
         android:id="@+id/signup"
+        android:backgroundTint="@color/primary_color"
         android:layout_alignTop="@+id/textView"
         android:layout_toRightOf="@+id/textView"
-        android:layout_toEndOf="@+id/textView"
-        android:backgroundTint="@color/dark_gold"/>
+        android:layout_toEndOf="@+id/textView" />
+
+
+
 
 
 </RelativeLayout>

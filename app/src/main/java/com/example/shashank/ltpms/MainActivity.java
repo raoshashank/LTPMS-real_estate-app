@@ -1,16 +1,11 @@
 package com.example.shashank.ltpms;
 
 import android.content.Intent;
+import android.graphics.Typeface;
 import android.os.Bundle;
-import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.Toolbar;
 import android.text.Html;
 import android.view.View;
-import android.view.Menu;
-import android.view.MenuItem;
-import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -38,13 +33,15 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        final String URL_LOGIN = "http://192.168.0.101/webapp/login.php";
-        final EditText email_et = (EditText) findViewById(R.id.email);
+        final String URL_LOGIN = "http://10.50.17.79/webapp/login.php";
+        final TextView email_et = (TextView) findViewById(R.id.email);
         final EditText password_et = (EditText) findViewById(R.id.password);
+
+        //Typeface font =  Typeface.createFromAsset(getAssets(), "fonts/Roboto-Black.ttf");
         TextView login = (TextView) findViewById(R.id.login);
+        //login.setTypeface(font);
         TextView signup = (TextView) findViewById(R.id.signup);
         signup.setText(Html.fromHtml("<p><u>SignUp</u></p>"));
-        //      Button register = (Button)findViewById(R.id.register);
         requestQueue = Volley.newRequestQueue(MainActivity.this);
         login.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -58,9 +55,10 @@ public class MainActivity extends AppCompatActivity {
                             if (jsonObject.names().get(0).equals("success")) {
                             //    Toast.makeText(getApplicationContext(), jsonObject.names().getString(0).toString(), Toast.LENGTH_SHORT).show();
                                 Intent intent = new Intent(MainActivity.this,HomeScreen.class);
+                                intent.putExtra("email",email_et.getText().toString());
                                 startActivity(intent);
                             } else {
-                                Toast.makeText(getApplicationContext(), "fail", Toast.LENGTH_SHORT).show();
+                                Toast.makeText(getApplicationContext(), jsonObject.getString("error"), Toast.LENGTH_SHORT).show();
                             }
 
 
